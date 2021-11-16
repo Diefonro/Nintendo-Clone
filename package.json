@@ -1,0 +1,24 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss ./app.css -o ./css/app.css",
+    "build": "NODE_ENV=production postcss ./app.css -o ./css/app.css",
+    "dev": "nodemon -x npm run build:css -w ./app.css -w tailwind.config.js -w ./index.html"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "@tailwindcss/jit": "^0.1.10",
+    "autoprefixer": "^10.4.0",
+    "postcss-cli": "^9.0.2",
+    "win-node-env": "^0.4.0"
+  }
+}
